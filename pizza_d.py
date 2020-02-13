@@ -25,7 +25,7 @@ while True:
             rnd = random.randint(0, n - 1)
         r = r - a[rnd]
         rs.remove(rnd)
-    if abs(r - m) < 2:
+    if abs(m - r) < 1 and m >= r:
         res = [a[i] for i in rs]
         print(len(res))
         print(' '.join(map(str, rs)))
